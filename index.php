@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <title>Login | Thaistar Estética</title>
         <meta charset="utf-8" />
