@@ -1,6 +1,4 @@
-const sistema = "estetica";
-
-import { exibirMsgRetorno, enviarRequisicaoPOST } from './helper/requestHelper.js';
+import { exibirMsgRetorno, enviarRequisicaoPOST } from '../helper/requestHelper.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     init();
@@ -26,7 +24,7 @@ async function autenticarUsuario() {
         }
 
         const urlRequest = 'http://localhost/github/api_estetica/core.php';
-        const dadosRequest = { email, senha, acaoAjax, sistema };
+        const dadosRequest = { email, senha, acaoAjax };
         
         try {
             const retornoAPI = await enviarRequisicaoPOST(urlRequest, dadosRequest);
@@ -44,5 +42,6 @@ async function autenticarUsuario() {
             console.error('Erro ao enviar requisição:', error);
             exibirMsgRetorno("div_retorno_login", "Erro ao acessar o sistema", "danger");
         }
+        
     });
 }

@@ -1,6 +1,6 @@
 const sistema = "estetica";
 
-import { enviarRequisicaoPOST } from './helper/requestHelper.js';
+import { enviarRequisicaoPOST } from '../helper/requestHelper.js';
 
 document.addEventListener("DOMContentLoaded", function () {
     init();
@@ -15,7 +15,11 @@ async function deslogarSistema() {
     const btnLogout = document.getElementById("btnLogout");
 
     btnLogout.addEventListener("click", async () => {
+
+        const desejaSair = window.confirm("Tem certeza que deseja sair do sistema?");
  
+        if ( !desejaSair ) return;
+
         const acaoAjax = "funcionarioSairSistema";
 
         const urlRequest = 'http://localhost/github/api_estetica/core.php';

@@ -1,11 +1,17 @@
+const sistema = "estetica";
+
 export async function enviarRequisicaoPOST(urlRequest, dadosRequest) {
+
     try {
+
+        const novoRequest = { ...dadosRequest, sistema };
+
         const response = await fetch(urlRequest, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(dadosRequest)
+            body: JSON.stringify(novoRequest)
         });
 
         if (!response.ok) {
@@ -35,7 +41,6 @@ export function exibirMsgRetorno(idDiv, msg, corRetorno) {
     divExibicaoMsg.appendChild(h6);
 
 }
-
 
 // Funções auxiliares que não devem ser importadas no programa principal
 function resetarDivMsg(elementoPrincipal) {

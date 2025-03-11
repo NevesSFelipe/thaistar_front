@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Painel Administrativo | Thaistar Estética</title>
+    <title>Thaistar Estética | Painel Administrativo</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
@@ -29,10 +29,12 @@
                 <p>Agendamentos</p>
             </div>
         
-            <div class="icon-box">
-                <i class="fas fa-cog"></i>
-                <p>Configurações</p>
-            </div>
+            <a href="parametrizador-horario.php" class="text-decoration-none">
+                <div class="icon-box">
+                    <i class="fas fa-cog"></i>
+                    <p>Configurações</p>
+                </div>
+            </a>
         
             <div class="icon-box" id="btnLogout">
                 <i class="fas fa-sign-out-alt"></i>
@@ -47,7 +49,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <script type="module" src="assets/js/painel-administrativo.js"></script>
+    <script type="module" src="assets/js/painel-administrativo/main-painel-administrativo.js"></script>
 
 </body>
 </html>
